@@ -1,0 +1,190 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://assets/background/set2_background.png" type="Texture" id=1]
+[ext_resource path="res://assets/fonts/KiriFont.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/MenuUI/grey_button04.png" type="Texture" id=3]
+[ext_resource path="res://assets/MenuUI/arrow-UP.png" type="Texture" id=4]
+[ext_resource path="res://Play.gd" type="Script" id=5]
+[ext_resource path="res://assets/MenuUI/grey_button13.png" type="Texture" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 75
+extra_spacing_top = 8
+extra_spacing_bottom = -8
+font_data = ExtResource( 2 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.164706, 0.164706, 0.164706, 0.760784 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 17
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 20
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 21
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 50
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 50
+font_data = ExtResource( 2 )
+
+[node name="Control" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Set2Background" type="Sprite" parent="."]
+modulate = Color( 0.447059, 0.945098, 1, 1 )
+position = Vector2( 489, 325 )
+scale = Vector2( 1.89688, 1.64583 )
+texture = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = 210.0
+margin_top = 78.0
+margin_right = 832.0
+margin_bottom = 154.0
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 8
+custom_constants/shadow_offset_y = 8
+custom_fonts/font = SubResource( 1 )
+text = "Bobby's Bar!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="Panel" parent="."]
+margin_top = 345.0
+margin_right = 459.0
+margin_bottom = 602.0
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GreyButton04" type="Sprite" parent="."]
+position = Vector2( 88, 399 )
+scale = Vector2( 0.842105, 1 )
+texture = ExtResource( 3 )
+
+[node name="Arrow-Up" type="Sprite" parent="."]
+position = Vector2( 136, 402 )
+rotation = -3.14159
+scale = Vector2( 0.0325, 0.0325 )
+texture = ExtResource( 4 )
+
+[node name="Faster instructions" type="Label" parent="."]
+margin_left = 32.0
+margin_top = 392.0
+margin_right = 291.0
+margin_bottom = 406.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Space/S/ "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GreyButton13" type="Sprite" parent="."]
+position = Vector2( 32, 470 )
+texture = ExtResource( 6 )
+
+[node name="GreyButton14" type="Sprite" parent="."]
+position = Vector2( 91, 470 )
+texture = ExtResource( 6 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 193.0
+margin_top = 392.0
+margin_right = 494.0
+margin_bottom = 413.0
+custom_fonts/font = SubResource( 4 )
+text = "To move down faster!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 22.0
+margin_top = 460.0
+margin_right = 42.0
+margin_bottom = 481.0
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 5 )
+text = "A    D"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 193.0
+margin_top = 468.0
+margin_right = 252.0
+margin_bottom = 482.0
+custom_fonts/font = SubResource( 6 )
+text = "To move!"
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 22.0
+margin_top = 551.0
+margin_right = 442.0
+margin_bottom = 573.0
+custom_fonts/font = SubResource( 7 )
+text = "Complete all 3 levels to win!"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play Buttom" type="Button" parent="."]
+margin_left = 655.0
+margin_top = 345.0
+margin_right = 843.0
+margin_bottom = 409.0
+custom_fonts/font = SubResource( 8 )
+text = "Play!"
+flat = true
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="toLevelselect" type="Button" parent="."]
+margin_left = 564.0
+margin_top = 422.0
+margin_right = 987.0
+margin_bottom = 540.0
+focus_mode = 0
+custom_fonts/font = SubResource( 9 )
+enabled_focus_mode = 0
+text = "Level Select"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Play Buttom" to="Play Buttom" method="_on_Button_pressed"]
+[connection signal="pressed" from="toLevelselect" to="Play Buttom" method="_on_toLevelselect_pressed"]
